@@ -1,6 +1,8 @@
-import { Meta, Links, Outlet } from '@remix-run/react'
+import { Meta, Links, Outlet, Scripts, LiveReload} from '@remix-run/react'
+import Header from './components/header'
 import styles from './styles/index.css'
 import normalize from './styles/normalize.css'
+
 
 export function meta(){
     return (
@@ -56,7 +58,10 @@ function Document({children}){
             <Links/>
         </head>
         <body>
+            <Header/>
             {children}
+            <Scripts/>
+            <LiveReload/>
         </body>
         </html>
     )

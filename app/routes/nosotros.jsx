@@ -1,4 +1,10 @@
-
+export function meta(){
+    return (
+        {
+            title: 'Guitar Shop - Nosotros',
+        }
+    )
+}
 
 function Nosostros() {
     return ( 
