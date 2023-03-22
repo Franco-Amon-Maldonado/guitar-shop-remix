@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate } from "react-router";
+import { useLoaderData, useNavigate } from "@remix-run/react";
 import { getGuitarra } from "~/api/guitarras.server";
 import styles from '../../styles/guitarras.css';
 

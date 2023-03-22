@@ -155,3 +155,24 @@
   min-height: 50vh;
 }
 
+.enlace,
+.boton-volver{
+    margin-top: 2rem;
+    display: block;
+    text-decoration: none;
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    padding:.7rem;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    transition: background-color .5s ease;
+    border: none;
+    cursor: pointer;
+
+}
+
+.enlace:hover, .boton-volver:hover{
+    background-color: var(--primary);
+}

@@ -1,0 +1,44 @@
+.blog{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+
+@media (min-width: 768px){
+    .blog{
+        grid-template-columns: repeat(2,1fr);
+        grid-row-gap: 5rem;
+    }
+}
+
+@media (min-width:992px){
+    .blog{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenido .titulo-post{
+    font: size 0.8rem;
+    color: var(--primary);
+    padding: 1.5rem;
+    text-align:center;
+
+}
+
+.post .fecha{
+    font-weight:bold;
+    font-size: 1.5rem;
+}
+
+.post .resumen{
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
