@@ -148,3 +148,10 @@
   }
 }
 
+.error{
+  font-size: 4rem;
+  display: grid;
+  place-items: center;
+  min-height: 50vh;
+}
+

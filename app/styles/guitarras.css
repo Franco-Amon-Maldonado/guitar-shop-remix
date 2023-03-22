@@ -9,10 +9,13 @@
     grid-template-columns: 2fr 3fr;
     gap: 1rem;
     align-items: center;
+    max-width: 70rem;
+    margin: 0 auto;
 }
 
 .guitarra .contenido{
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .guitarra .contenido h3{
@@ -34,7 +37,8 @@
     font-weight: 900;
 }
 
-.guitarra .enlace{
+.guitarra .enlace,
+.boton-volver{
     margin-top: 2rem;
     display: block;
     text-decoration: none;
@@ -42,16 +46,22 @@
     color: var(--white);
     text-align: center;
     text-transform: uppercase;
-    padding:.5rem;
+    padding:.7rem;
     font-size: 1.2rem;
     border-radius: 3px;
     transition: background-color .5s ease;
+    border: none;
+    cursor: pointer;
 
 }
 
-.guitarra .enlace:hover{
+.guitarra .enlace:hover, .boton-volver:hover{
     background-color: var(--primary);
-    font-weight: 900;
+}
+
+.guitarra .contenido .boton-volver{
+   align-self: center;
+   padding: 1rem;
 }
 
 @media (min-width: 768px){
@@ -60,6 +70,10 @@
         grid-column-gap: 8rem;
         grid-row-gap: 10rem;
     }
+    .guitarra .contenido .boton-volver{
+        align-self: flex-end;
+    }
+    
 }
 
 @media (min-width: 992px){
