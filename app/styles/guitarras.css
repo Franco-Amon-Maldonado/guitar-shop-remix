@@ -6,7 +6,7 @@
 
 .guitarra{
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 2fr;
     gap: 1rem;
     align-items: center;
     max-width: 70rem;
@@ -38,20 +38,13 @@
 }
 
 
-.guitarra .contenido .boton-volver{
-   align-self: center;
-   padding: 1rem;
-}
-
 @media (min-width: 768px){
     .guitarras-grid{
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 8rem;
         grid-row-gap: 10rem;
     }
-    .guitarra .contenido .boton-volver{
-        align-self: flex-end;
-    }
+
     
 }
 

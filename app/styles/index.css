@@ -167,10 +167,12 @@
   min-height: 50vh;
 }
 
+
+
 .enlace,
 .boton-volver{
+    display:block;
     margin-top: 2rem;
-    display: block;
     text-decoration: none;
     background-color: var(--black);
     color: var(--white);
@@ -184,6 +186,17 @@
     cursor: pointer;
 
 }
+
+.contenido .boton-volver{
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px){
+ .contenido .boton-volver{
+   align-self:flex-end;
+ }
+}
+
 
 .enlace:hover, .boton-volver:hover{
     background-color: var(--primary);

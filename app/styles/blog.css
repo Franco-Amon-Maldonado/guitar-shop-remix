@@ -17,7 +17,8 @@
     }
 }
 
-.post{
+
+.posts, .post{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -31,14 +32,28 @@
 
 }
 
+.posts .fecha, 
 .post .fecha{
     font-weight:bold;
     font-size: 1.5rem;
 }
 
-.post .resumen{
+.posts .resumen{
     display:-webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
+}
+
+.post{
+    padding: 1.5rem 0;
+}
+
+.post img{
+    display: block;
+    margin: 0 auto;
+}
+
+.post .texto{
+    white-space: pre-wrap;
 }
