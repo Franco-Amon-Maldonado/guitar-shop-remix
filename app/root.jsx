@@ -79,7 +79,7 @@ export function CatchBoundary() {
     )
 }
 
-export function ErrorBooudary({error}){
+export function ErrorBoundary({error}){
     return(
         <Document>
             <p className="error">{error.status} {error.statusText}</p>

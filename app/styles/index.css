@@ -52,6 +52,23 @@
     align-items: center;
   }
 
+  .header .navegacion{
+    display: flex;
+    gap: 5rem;
+    margin-top: 7rem;
+  }
+
+  @media(max-width:576px){
+    .header .navegacion {
+      gap: 2rem;
+    }
+    .navegacion{
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
   @media (min-width: 768px){
     .barra{
       flex-direction: row;
@@ -62,11 +79,6 @@
     }
   }
 
-  .header .navegacion{
-    display: flex;
-    gap: 5rem;
-    margin-top: 7rem;
-  }
 
   .header .navegacion a{
     color: var(--primary);
