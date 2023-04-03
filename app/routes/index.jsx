@@ -6,6 +6,7 @@ import ListadoGuitarras from "~/components/listado-guitarras";
 import ListadoPosts from "~/components/listado-posts";
 import stylesGuitarras from '../styles/guitarras.css'
 import stylesPosts from '../styles/blog.css'
+import stylesCurso from '../styles/curso.css'
 import Curso from "~/components/curso";
 
 export function meta(){
@@ -21,6 +22,10 @@ export function links(){
         {
             rel: 'stylesheet',
             href: stylesPosts
+        },
+        {
+            rel: 'stylesheet',
+            href: stylesCurso
         }
     ]
 }
