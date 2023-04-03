@@ -1,7 +1,6 @@
 import { useLoaderData, useNavigate } from "react-router";
 import { getPost } from "~/api/posts.server";
 import { formatearFecha } from "~/utils/helpers";
-import styles from "~/styles/blog.css"
 import { Link } from "@remix-run/react";
 
 
@@ -22,15 +21,6 @@ export async function  loader({params}){
     return post
 
     
-}
-
-export function links(){
-    return [
-        {
-            rel: 'stylesheet',
-            href: styles
-        }
-    ]
 }
 
 export function meta({data}){
@@ -57,7 +47,7 @@ function Pots() {
 
     return ( 
     
-        <article className="contenedor post">
+        <article className="post">
 
         <img src={imagen.data.attributes.url} alt="Imagen del blog" />
             
