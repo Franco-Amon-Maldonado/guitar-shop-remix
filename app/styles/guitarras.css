@@ -53,3 +53,40 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.formulario select{
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+    width: 50%;
+}
+
+.formulario .boton-carrito{
+    margin-top: 3rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: 700;
+    transition: opacity .3s ease;
+    align-self: flex-start;
+    width: 50%;
+}
+
+.formulario .boton-carrito:hover{
+    opacity: .7;
+    cursor: pointer;
+}
