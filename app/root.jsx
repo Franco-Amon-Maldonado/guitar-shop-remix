@@ -3,6 +3,7 @@ import Footer from './components/footer'
 import Header from './components/header'
 import styles from './styles/index.css'
 import normalize from './styles/normalize.css'
+import { useState } from 'react'
 
 
 export function meta(){
@@ -42,9 +43,34 @@ export function links(){
 }
 
 export default function App(){
+    const [carrito, setCarrito] = useState([])
+
+    const agregarCarrito = (guitarra) =>{
+        //El metodo some, devuelve true si hay un objeto igual en el state
+        if(carrito.some(guitarraState => guitarraState.id === guitarra.id)){
+            //Iterar sobre el arreglo, e identificar el elemento duplicado
+            const carritoActualizado = carrito.map(guitarraState=>{
+                if(guitarraState.id === guitarra.id){
+                    //Reescribir la cantidad
+                    guitarraState.cantidad = guitarra.cantidad
+                }
+                return guitarraState
+            })
+            //Añade al carrito un nuevo objeto
+            setCarrito(carritoActualizado)
+        }else{
+            //Registro uevo, agregar al carrito
+            setCarrito([...carrito, guitarra])
+        }
+    }
+
     return (
         <Document>
-            <Outlet/>
+            <Outlet
+                context={{
+                    agregarCarrito
+                }}
+            />
         </Document>
     )
 }

@@ -1,5 +1,7 @@
+
 import Imagen from '../../public/img/nosotros.jpg';
 import styles from '../styles/nosotros.css';
+
 
 export function meta() {
     return (
@@ -25,6 +27,7 @@ export function links(){
 }
 
 function Nosostros() {
+    
     return (
         <main className="contenedor nosotros">
             <h2 className="heading">Nosotros</h2>
