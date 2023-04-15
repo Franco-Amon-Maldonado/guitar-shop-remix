@@ -3,7 +3,7 @@ import Footer from './components/footer'
 import Header from './components/header'
 import styles from './styles/index.css'
 import normalize from './styles/normalize.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 
 export function meta(){
@@ -44,9 +44,12 @@ export function links(){
 }
 
 export default function App(){
-    const [carrito, setCarrito] = useState([])
+    const carritoLS = typeof window !== 'undefined' && JSON.parse(localStorage.getItem('carrito')) || []
+    const [carrito, setCarrito] = useState(carritoLS)
 
-
+    useEffect(()=>{
+        localStorage.setItem('carrito', JSON.stringify(carrito))
+    },[carrito])
 
     const agregarCarrito = (guitarra) =>{
         //El metodo some, devuelve true si hay un objeto igual en el state
