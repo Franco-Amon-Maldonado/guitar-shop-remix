@@ -35,6 +35,7 @@ export function links(){
             rel: 'preconnect',
             href: 'https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700;900&display=swap'
         },
+
         {
             rel: 'stylesheet',
             href: styles
@@ -44,6 +45,8 @@ export function links(){
 
 export default function App(){
     const [carrito, setCarrito] = useState([])
+
+
 
     const agregarCarrito = (guitarra) =>{
         //El metodo some, devuelve true si hay un objeto igual en el state
@@ -64,12 +67,29 @@ export default function App(){
         }
     }
 
+    const actualizarCantidad = guitarra =>{
+        const carritoActualizado = carrito.map(guitarraState=>{
+            if(guitarraState.id === guitarra.id){
+                guitarraState.cantidad = guitarra.cantidad
+            }
+            return guitarraState
+        })
+        setCarrito(carritoActualizado)
+    }
+
+    const eliminarGuitarra = id => {
+        const carritoActualizado = carrito.filter(guitarraState=> guitarraState.id !== id)
+        setCarrito(carritoActualizado)
+    }
+
     return (
         <Document>
             <Outlet
                 context={{
                     agregarCarrito,
-                    carrito
+                    carrito,
+                    actualizarCantidad,
+                    eliminarGuitarra
                 }}
             />
         </Document>

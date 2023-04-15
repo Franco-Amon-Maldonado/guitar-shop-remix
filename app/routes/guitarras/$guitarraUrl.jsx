@@ -1,7 +1,9 @@
 import { useLoaderData, useNavigate, useOutletContext } from "@remix-run/react";
 import { useState } from "react";
+import Swal from 'sweetalert2'
 
 import { getGuitarra } from "~/api/guitarras.server";
+
 
 
 export async function loader({params}){
@@ -45,7 +47,11 @@ function Guitarra() {
     const handleSubmit = e =>{
         e.preventDefault()
         if(cantidad < 1){
-            alert('Debes seleccionar una cantidad')
+            Swal.fire(
+                'Error',
+                'Debes seleccionar una cantidad primero',
+                'error'
+              )
             return
         }
 
@@ -59,6 +65,13 @@ function Guitarra() {
         }
 
         agregarCarrito(guitarraSeleccionada)
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Agregado al carrito éxitosamente',
+            showConfirmButton: false,
+            timer: 1500
+          })
         
     }
 

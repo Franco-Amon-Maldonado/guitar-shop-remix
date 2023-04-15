@@ -16,6 +16,7 @@
 
 .producto{
     display: grid;
+    position: relative;
     grid-template-columns: 1fr 3fr;
     gap: 3rem;
     padding: 3rem 0;
@@ -47,6 +48,22 @@
     
 }
 
+.informacion .cantidad{
+    all: unset;
+    border: 1px solid #cfcfcf;
+    text-align: center;
+    padding: .5rem;
+    width: 100%;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+@media(min-width:768px){
+    .informacion .cantidad{
+        width: 50%;
+    }
+}
+
 .producto .precio-final .precio{
     font-weight: 700;
     color: var(--primary);
@@ -58,6 +75,29 @@
     font-weight:bold;
 }
 
+.producto .btn_eliminar {
+    all: unset;
+    position: absolute;
+    top: 3rem;
+    right:1rem;
+    cursor: pointer;
+}
+
+
+.producto .btn_eliminar:hover::before {
+    content: "Eliminar";
+    position: relative;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+   
+  }
 
 .resumen{
     background-color: #f9fafb;
@@ -66,4 +106,5 @@
     top: 3rem;
     border-radius: 1rem;
 }
+
 

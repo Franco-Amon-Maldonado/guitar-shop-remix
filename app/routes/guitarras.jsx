@@ -7,6 +7,10 @@ export function links(){
         {
             rel: 'stylesheet',
             href:styles
+        },
+        {
+            rel: 'stylesheet',
+            href:"sweetalert2.min.css"
         }
     ]
 }
